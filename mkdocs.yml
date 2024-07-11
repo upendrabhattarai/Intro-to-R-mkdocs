@@ -10,6 +10,7 @@ repo_url: https://github.com/hbctraining/Intro-to-R-mkdocs
 
 
 
+
 theme:
   name: material
   custom_dir: overrides
@@ -22,8 +23,9 @@ theme:
   static_templates:
     - 404.html
   features:
-    - toc.integrate
+    - toc.autohide
     - content.tooltips
+
 
   palette:
 
@@ -59,6 +61,7 @@ theme:
     - navigation.top
     - navigation.footer
     - content.code.copy
+    - content.code.annotate
     
 
   # Necessary for search to work properly
@@ -133,3 +136,5 @@ extra:
   analytics:
   provider: google
   property: UA-150953419-1
+
+

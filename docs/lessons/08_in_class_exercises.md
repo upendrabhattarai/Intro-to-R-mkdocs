@@ -28,20 +28,20 @@
 In your environment you should have a dataframe called `proj_summary` which contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. 
 
 !!!question "Exercise"
-    Copy and paste the code below to create a dataframe of control samples with the associated batch information
-    ```
-    ctrl_samples <- data.frame(row.names = c("sample3", "sample10", "sample8", "sample4", "sample15"), date = c("01/13/2018", "03/15/2018", "01/13/2018", "09/20/2018","03/15/2018"))
-    ```
-    How many of the `ctrl_samples` are also in the `proj_summary` dataframe? Use the `%in%` operator to compare sample names. <br>
+    1. **Copy and paste the code below to create a dataframe of control samples with the associated batch information**
+        ```r
+        ctrl_samples <- data.frame(row.names = c("sample3", "sample10", "sample8", "sample4", "sample15"), date = c("01/13/2018", "03/15/2018", "01/13/2018", "09/20/2018","03/15/2018"))
+        ```
+    2. How many of the `ctrl_samples` are also in the `proj_summary` dataframe? Use the `%in%` operator to compare sample names. <br>
 
-    Keep only the rows in `proj_summary` which correspond to those in `ctrl_samples`. Do this with the %in% operator. Save it to a variable called `proj_summary_ctrl`.<br>
+    3. Keep only the rows in `proj_summary` which correspond to those in `ctrl_samples`. Do this with the %in% operator. Save it to a variable called `proj_summary_ctrl`.<br>
 
-    We would like to add in the batch information for the samples in `proj_summary_ctrl`. Find the rows that match in `ctrl_samples`.<br>
+    4. We would like to add in the batch information for the samples in `proj_summary_ctrl`. Find the rows that match in `ctrl_samples`.<br>
 
-    Use `cbind()` to add a column called `batch` to the `proj_summary_ctrl` dataframe. Assign this new dataframe back to `proj_summary_ctrl`.
+    5. Use `cbind()` to add a column called `batch` to the `proj_summary_ctrl` dataframe. Assign this new dataframe back to `proj_summary_ctrl`.
 
 
-    ???success "Solution"
+    ???warning "Solution"
 
         ```r
         ## Reading in and inspecting data
@@ -104,7 +104,7 @@ In your environment you should have a dataframe called `proj_summary` which cont
     2. Further, subset the dataframe to remove the non-numeric columns "Quality_format", and "treatment". Try to do this using the `map_lgl()` function in addition to `is.numeric()`. Save the new dataframe back to `proj_summary_noctl`.
 
 
-    ???success "Solution"
+    ???warning "Solution"
 
         ```r
         ## BONUS: Using `map_lgl()` 

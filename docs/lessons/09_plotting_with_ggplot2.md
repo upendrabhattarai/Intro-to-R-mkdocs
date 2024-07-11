@@ -66,7 +66,7 @@ Try the code below and see what happens.
 ggplot(new_metadata) # what happens? 
 ```
 
-!!!note "Metadata"
+!!!info "Metadata"
     If you don't have the new_metadata object, you can right-click to download and save an `rds` file [from here](https://www.dropbox.com/s/xwsaisraubghawt/new_metadata.rds?dl=1){ .md-button} into the project `data` folder, and load it in using the code below:
     ```r
     new_metadata <- readRDS("data/new_metadata.rds")`

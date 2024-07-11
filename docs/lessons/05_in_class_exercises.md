@@ -17,16 +17,17 @@ Now we want to round the temperature in Kelvin (output of `temp_conv()`) to a si
     Use the `round()` function with the newly-created  `temp_conv()` function to achieve this in one line of code. If your input is 70, the output should now be 294.3.
 
 
-???success "Solution"
-    ```r
-        # Part 1
-        temp_conv <- function(temp_f) {
-            temp_c = (temp_f - 32) * 5 / 9
-            temp_k = temp_c + 273.15
-        return (temp_k)
-        }
-
-        # Part 2
-        round(temp_conv(70), digits = 1)
+??? warning "Solution"
+    **Part 1**
+        ```r
+            temp_conv <- function(temp_f) {
+                temp_c = (temp_f - 32) * 5 / 9
+                temp_k = temp_c + 273.15
+            return (temp_k)
+             }
+        ```
+    **Part 2**
+        ```r
+            round(temp_conv(70), digits = 1)
 
         ```
