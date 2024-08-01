@@ -27,7 +27,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
 <div class="grid cards" markdown>
 
-- [__R Syntax and Data Structure__](./homeworks/r_syntax_and_data_structures.md)
+- [__R Syntax and Data Structure__](../exercises/r_syntax_and_data_structures.md)
     
     ??? info "About data types and data structure"
         In order to utilize R effectively, you will need to understand what types of data you can use in R and also how you can store data in "objects" or "variables".
@@ -40,7 +40,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
         - What are the different objects that you can use to store data in R
 
-- [__Functions and Arguments__](./homeworks/functions_and_arguments.md)
+- [__Functions and Arguments__](../exercises/functions_and_arguments.md)
 
     ??? info "Functions and Arguments in R"
         Functions are the basic "commands" used in R to get something done. To use functions (denoted by function_name followed by "()"), one has to enter some information within the parenthesis and optionally some arguments to change the default behavior of a function.
@@ -53,7 +53,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
         - Creating your own custom functions
 
-- [__Reading in and inspecting data__](./homeworks/reading_in_and_data_inspection.md)
+- [__Reading in and inspecting data__](../exercises/reading_in_and_data_inspection.md)
 
     ??? info "Read and inspect data structures in R"
         When using R, it is almost a certainty that you will have to bring data into the R environment.
@@ -66,7 +66,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
 - [__Submit here__](https://docs.google.com/forms/d/e/1FAIpQLSfL04I7TVfs5At3n7OCLBieUsJ8nxZgjbO6mQQwCzKoBG1iLA/viewform)
     
-    !!! danger "Submit a day before the next class."
+    !!! success "Submit a day before the next class."
 
 </div>
 
@@ -155,7 +155,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
 - [__Submit here__](https://docs.google.com/forms/d/e/1FAIpQLSegEjBKDkK4TB7uhNfcBl6633hasPrGsYDnFuH683blpZNtfg/viewform)
     
-    !!! danger "Submit a day before the next class."
+    !!! success "Submit a day before the next class."
 
 </div>
 
@@ -238,7 +238,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
 - [__Submit here__](https://docs.google.com/forms/d/e/1FAIpQLSdelYtXxCGQZOWd2T28REjU5NC_NS4n-HZte8OEgFXS6Q5wcA/viewform)
     
-    !!! danger "Submit a day before the next class."
+    !!! success "Submit a day before the next class."
 
 </div>
 
@@ -299,14 +299,14 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 * * * 
 
 
-!!!result "Citation"    
+!!!quote "Citation"    
     * *To cite material from this course in your publications, please use:*
 
         **Meeta Mistry, Mary Piper, Jihe Liu, & Radhika Khetani. (2021, May 5). hbctraining/Intro-to-R-flipped: R workshop first release. Zenodo. https://doi.org/10.5281/zenodo.4739342**
 
     * A lot of time and effort went into the preparation of these materials. Citations help us understand the needs of the community, gain recognition for our work, and attract further funding to support our teaching activities. Thank you for citing this material if it helped you in your data analysis.
 
-!!!result "Attribution notice"
+!!!quote "Attribution notice"
     * *These materials have been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
 
     * *Some materials used in these lessons were derived from work that is Copyright © [Data Carpentry](http://datacarpentry.org/). All Data Carpentry instructional material is made available under the [Creative Commons Attribution license (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)*

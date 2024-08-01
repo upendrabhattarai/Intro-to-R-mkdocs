@@ -97,7 +97,13 @@
     </div>
     
     
-      
+<!-- Custom Banner -->
+<div class="banner">
+    <p style="color:rgb(244, 247, 248); display:inline;font-size: 160%;">This repository is in the early stages of development (Beta Version)</p>
+</div>
+
+<!-- Original Header -->
+
 
   
 
@@ -105,7 +111,7 @@
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Intro-to-R-mkdocs" class="md-header__button md-logo" aria-label="Intro-to-R-mkdocs" data-md-component="logo">
       
-  <img src="../../theme_figures/HBC_logo.png" alt="logo">
+  <img src="../../theme_figures/HBC_logo_2.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -223,7 +229,7 @@
   </nav>
   
 </header>
-    
+
     <div class="md-container" data-md-component="container">
       
       
@@ -348,14 +354,24 @@
 <p>In your environment you should have a dataframe called <code>proj_summary</code> which contains quality metric information for an RNA-seq dataset. We have obtained batch information for the control samples in this dataset. </p>
 <div class="admonition question">
 <p class="admonition-title">Exercise</p>
-<p>Copy and paste the code below to create a dataframe of control samples with the associated batch information
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>ctrl_samples &lt;- data.frame(row.names = c(&quot;sample3&quot;, &quot;sample10&quot;, &quot;sample8&quot;, &quot;sample4&quot;, &quot;sample15&quot;), date = c(&quot;01/13/2018&quot;, &quot;03/15/2018&quot;, &quot;01/13/2018&quot;, &quot;09/20/2018&quot;,&quot;03/15/2018&quot;))
-</code></pre></div>
-How many of the <code>ctrl_samples</code> are also in the <code>proj_summary</code> dataframe? Use the <code>%in%</code> operator to compare sample names. <br></p>
+<ol>
+<li><strong>Copy and paste the code below to create a dataframe of control samples with the associated batch information</strong>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="n">ctrl_samples</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span><span class="n">row.names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;sample3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sample10&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sample8&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sample4&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;sample15&quot;</span><span class="p">),</span><span class="w"> </span><span class="n">date</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;01/13/2018&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;03/15/2018&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;01/13/2018&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;09/20/2018&quot;</span><span class="p">,</span><span class="s">&quot;03/15/2018&quot;</span><span class="p">))</span>
+</code></pre></div></li>
+<li>
+<p>How many of the <code>ctrl_samples</code> are also in the <code>proj_summary</code> dataframe? Use the <code>%in%</code> operator to compare sample names. <br></p>
+</li>
+<li>
 <p>Keep only the rows in <code>proj_summary</code> which correspond to those in <code>ctrl_samples</code>. Do this with the %in% operator. Save it to a variable called <code>proj_summary_ctrl</code>.<br></p>
+</li>
+<li>
 <p>We would like to add in the batch information for the samples in <code>proj_summary_ctrl</code>. Find the rows that match in <code>ctrl_samples</code>.<br></p>
+</li>
+<li>
 <p>Use <code>cbind()</code> to add a column called <code>batch</code> to the <code>proj_summary_ctrl</code> dataframe. Assign this new dataframe back to <code>proj_summary_ctrl</code>.</p>
-<details class="success">
+</li>
+</ol>
+<details class="warning">
 <summary>Solution</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">## Reading in and inspecting data</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
@@ -418,7 +434,7 @@ How many of the <code>ctrl_samples</code> are also in the <code>proj_summary</co
 <li>Subset <code>proj_summary</code> to keep only the "high" and "low" samples based on the treament column. Save the new dataframe to a variable called <code>proj_summary_noctl</code>.</li>
 <li>Further, subset the dataframe to remove the non-numeric columns "Quality_format", and "treatment". Try to do this using the <code>map_lgl()</code> function in addition to <code>is.numeric()</code>. Save the new dataframe back to <code>proj_summary_noctl</code>.</li>
 </ol>
-<details class="success">
+<details class="warning">
 <summary>Solution</summary>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">## BONUS: Using `map_lgl()` </span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="c1"># 1. Subset `proj_summary` to keep only the &quot;high&quot; and &quot;low&quot; samples based on the treament column. Save the new dataframe to a variable called `proj_summary_noctl`</span>
@@ -431,6 +447,18 @@ How many of the <code>ctrl_samples</code> are also in the <code>proj_summary</co
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">proj_summary_noctl</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">proj_summary_noctl</span><span class="p">[,</span><span class="n">keep</span><span class="p">]</span>
 </code></pre></div>
 </details>
+</div>
+<hr />
+<div class="admonition quote">
+<p class="admonition-title">Attribution notice</p>
+<ul>
+<li>
+<p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
+</li>
+<li>
+<p><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/).All">http://datacarpentry.org/).All</a> Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></p>
+</li>
+</ul>
 </div>
 
 
@@ -452,7 +480,7 @@ How many of the <code>ctrl_samples</code> are also in the <code>proj_summary</co
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-06-04
+    2024-07-11
   </span>
 
     
@@ -481,60 +509,60 @@ How many of the <code>ctrl_samples</code> are also in the <code>proj_summary</co
         
       </main>
       
-        <footer class="md-footer" style="background-color: #57484a;">
+        <footer class="md-footer" style="background-color: #585765;">
+  
     
       
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
-        <nav class="md-footer__inner md-grid" aria-label="Footer" >
           
-            
-            <a href="../06_data_wrangling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data subsetting with base R: vectors and factors">
-              <div class="md-footer__button md-icon">
-                
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-              </div>
-              <div class="md-footer__title">
-                <span class="md-footer__direction">
-                  Previous
-                </span>
-                <div class="md-ellipsis">
-                  Data subsetting with base R: vectors and factors
-                </div>
-              </div>
-            </a>
-          
-    
-    <footer class="md-footer" style="background-color: #57484a;">
-        <div class="md-footer-meta__inner md-grid">
-            <div class="md-copyright">
-                <img src="../../theme_figures/HBC_logo.png" width=200px height=90px;>
+          <a href="../06_data_wrangling/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Data subsetting with base R: vectors and factors">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
             </div>
-        </div>
-    </footer>
-    
-          
-            
-            <a href="../09_plotting_with_ggplot2/" class="md-footer__link md-footer__link--next" aria-label="Next: Plotting and data visualization in R">
-              <div class="md-footer__title">
-                <span class="md-footer__direction">
-                  Next
-                </span>
-                <div class="md-ellipsis">
-                  Plotting and data visualization in R
-                </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Data subsetting with base R: vectors and factors
               </div>
-              <div class="md-footer__button md-icon">
-                
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-              </div>
-            </a>
-          
-        </nav>
-      
-    
-    <div class="md-footer-meta md-typeset">
+            </div>
+          </a>
+        
+  
+  <footer class="md-footer" style="background-color: #585765;">
       <div class="md-footer-meta__inner md-grid">
-        <div class="md-copyright">
+          <div class="md-copyright" style="text-align: center;">
+              <img src="../../theme_figures/HBC_logo_2.png" width=150px height=60px;>
+          </div>
+      </div>
+  </footer>
+  
+        
+          
+          <a href="../09_plotting_with_ggplot2/" class="md-footer__link md-footer__link--next" aria-label="Next: Plotting and data visualization in R">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Plotting and data visualization in R
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
   
   
     Made with
@@ -543,10 +571,10 @@ How many of the <code>ctrl_samples</code> are also in the <code>proj_summary</co
     </a>
   
 </div>
-        
-      </div>
+      
     </div>
-  </footer>
+  </div>
+</footer>
       
     </div>
     <div class="md-dialog" data-md-component="dialog">
@@ -554,7 +582,7 @@ How many of the <code>ctrl_samples</code> are also in the <code>proj_summary</co
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tracking", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "content.code.copy", "content.code.annotate"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.081f42fc.min.js"></script>

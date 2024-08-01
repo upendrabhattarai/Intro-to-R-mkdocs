@@ -14,7 +14,7 @@ repo_url: https://github.com/hbctraining/Intro-to-R-mkdocs
 theme:
   name: material
   custom_dir: overrides
-  logo: ./theme_figures/HBC_logo.png
+  logo: ./theme_figures/HBC_logo_2.png
   favicon: ./theme_figures/HBC_logo.png
   language: en
   font:
@@ -23,8 +23,12 @@ theme:
   static_templates:
     - 404.html
   features:
+    - announce.dismiss
     - toc.autohide
     - content.tooltips
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
 
 
   palette:
@@ -68,6 +72,11 @@ theme:
   include_search_page: false
   search_index_only: true
 
+nav:
+  - Section:
+    - section/index.md
+    - Home: index.md
+    - Workshop Schedule: lessons/00_workshop_schedule.md
 
 markdown_extensions:
   - abbr

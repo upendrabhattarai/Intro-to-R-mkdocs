@@ -14,7 +14,6 @@ Approximate time: 60 minutes
 ## Data Visualization with `ggplot2`
 
 ***
-
 For this lesson, you will need the `new_metadata` data frame. Please download it from the link below. Right click and save link as or download file as in the data directory.
 
 
@@ -196,5 +195,5 @@ ggplot(new_metadata) +
 
 * * *
 
-!!! result "Attribution notice"
+!!! quote "Attribution notice"
     *This lesson has been developed by members of the teaching team at the [Harvard Chan Bioinformatics Core (HBC)](http://bioinformatics.sph.harvard.edu/). These are open access materials distributed under the terms of the [Creative Commons Attribution license](https://creativecommons.org/licenses/by/4.0/) (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*
