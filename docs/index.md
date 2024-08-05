@@ -1,7 +1,4 @@
----
-hide:
-  - footer
----
+
 
 
 </center>
@@ -62,7 +59,7 @@ Download the most recent version of R and RStudio for the appropriate OS followi
 
 </div>
 
-All the files used in the lessons are linked within, but can also be accessed through the link below.
+All the data files used in the lessons are linked within, but can also be accessed through the link below.
 
 <div class="grid cards" markdown>
 
@@ -75,7 +72,7 @@ All the files used in the lessons are linked within, but can also be accessed th
 
 <div class="grid cards" markdown>
 
-- __Trainer led workshop__ [__Click here__](./lessons/00_workshop_schedule.md)
+- __Trainer led workshop__ [__Click here__](./Workshop_Schedule.md)
 
 
 - __Self learning materials__ [__Click here__](https://hbctraining.github.io/Intro-to-R-flipped/schedules/links-to-lessons.html)

@@ -32,9 +32,8 @@
 :root > * {
     --md-code-hl-comment-color: var(--md-default-fg-color--lighter);
 }
-.md-footer {
-    z-index: 1;
-}
+
+
 
 /* HBC style typography */
 .md-typeset h1 {
@@ -137,23 +136,6 @@ body[data-md-color-scheme="slate"] .excalidraw svg {
     margin: 0rem auto 0;
 }
 
-/* Custom Footer */
-.footer_cc_link svg {
-    fill: currentcolor;
-    width: 0.5rem;
-    height: 0.5rem;
-    vertical-align: -18%;
-}
-.footer_hbc_logo img {
-    opacity: 0.5;
-    height: 1.5rem;
-    margin-top: 0.5rem;
-}
-.footer_hbc_logo:hover img,
-.footer_hbc_logo:active img,
-.footer_hbc_logo:focus img {
-    opacity: 0.8;
-}
 
 /* Custom table */
 table {
@@ -163,7 +145,6 @@ table {
   td {
     padding: 1px; /* Adjust padding as needed */
   }
-
 
 
 /* Custom admonitions */

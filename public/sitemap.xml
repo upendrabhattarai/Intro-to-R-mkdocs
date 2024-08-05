@@ -6,6 +6,41 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/exercises/11b_Custom_Functions_ggplot2/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/exercises/12_boxplot_exercise/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/exercises/13_exporting_data_and_plots/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/exercises/14_finding_help/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/exercises/15_tidyverse/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/exercises/Intro_to_R_hw/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/exercises/Intro_to_R_key/</loc>
+         <lastmod>2024-08-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/exercises/functions_and_arguments/</loc>
          <lastmod>2024-08-01</lastmod>
          <changefreq>daily</changefreq>

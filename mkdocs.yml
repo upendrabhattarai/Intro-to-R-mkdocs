@@ -8,7 +8,9 @@ site_url: "https://github.com/hbctraining/Intro-to-R-mkdocs"
 repo_name: hbctraining/Intro-to-R-mkdocs
 repo_url: https://github.com/hbctraining/Intro-to-R-mkdocs
 
-
+nav:
+  - 'index.md'
+  - 'Workshop_Schedule.md'
 
 
 theme:
@@ -23,8 +25,6 @@ theme:
   static_templates:
     - 404.html
   features:
-    - announce.dismiss
-    - toc.autohide
     - content.tooltips
     - navigation.tabs
     - navigation.tabs.sticky
@@ -63,20 +63,16 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
-    - navigation.footer
+    - navigation.tabs
+    - navigation.prune
     - content.code.copy
     - content.code.annotate
-    
+
 
   # Necessary for search to work properly
   include_search_page: false
   search_index_only: true
 
-nav:
-  - Section:
-    - section/index.md
-    - Home: index.md
-    - Workshop Schedule: lessons/00_workshop_schedule.md
 
 markdown_extensions:
   - abbr
