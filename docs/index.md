@@ -63,7 +63,7 @@ All the data files used in the lessons are linked within, but can also be access
 
 <div class="grid cards" markdown>
 
-[:fontawesome-brands-square-github: __Dataset__ download](./data/)
+[:fontawesome-brands-square-github: __Dataset__ download](https://github.com/hbctraining/Intro-to-R-mkdocs/tree/main/docs/data)
 
 </div>
 
