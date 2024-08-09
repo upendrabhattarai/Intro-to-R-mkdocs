@@ -16,7 +16,7 @@
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
 |[1. Workshop Introduction](./day_1/D1.1_intro_to_R_workshop_all.pdf){ .md-button .md-button--primary} | Welcome and housekeeping | Will | 10:00-10:30 |
 |[2. Intro to R and RStudio](./day_1/D1.2_introR-R-and-RStudio.md){ .md-button .md-button--primary} | Introduction to R and RStudio| Noor | 10:30-11:45 |
-|[3. Self learning materials](#before-the-next-class){ .md-button .md-button--primary} |Overview of self-learning materials | Will | 11:45-12:00 |
+|[3. Self learning materials](#){ .md-button .md-button--primary} |Overview of self-learning materials | Will | 11:45-12:00 |
 
 </div>
 
@@ -32,7 +32,7 @@ B. **Complete the exercises:**
 
 Questions?
 
-If you get stuck due to an error while running code in the lesson, [email us](hbctraining@hsph.harvard.edu)
+If you get stuck due to an error while running code in the lesson, [email us](mailto:hbctraining@hsph.harvard.edu)
 
 <div class="grid cards" markdown>
 
@@ -94,7 +94,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
 | **Lesson**                                        | **Overview** | **Instructor** | **Time** |
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
-|[4. Review self-learning](#before-the-next-class #1){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:50 |
+|[4. Review self-learning](#before-the-next-class){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:50 |
 |[5. In-class exercises ](./day_2/D2.1_in_class_exercises.md){ .md-button .md-button--primary } | Use and customize function and arguments| Noor | 10:50-11:15 |
 |[6. Data Wrangling](./day_2/D2.2_data_wrangling.md){ .md-button .md-button--primary} |Subsetting Vectors and Factors | Will | 11:15-12:00 |
 
@@ -113,7 +113,7 @@ B. **Complete the exercises:**
 
 Questions?
 
-If you get stuck due to an error while running code in the lesson, [email us](hbctraining@hsph.harvard.edu)
+If you get stuck due to an error while running code in the lesson, [email us](mailto:hbctraining@hsph.harvard.edu)
 
 
 <div class="grid cards" markdown>
@@ -225,7 +225,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
 | **Lesson**                                        | **Overview** | **Instructor** | **Time** |
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
-|[7. Review self-learning](#before-the-next-class #2){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:35 |
+|[7. Review self-learning](#before-the-next-class-1){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:35 |
 |[8. In-class exercises ](./day_3/D3.1_in_class_exercises.md){ .md-button .md-button--primary } | Customizing functions and arguments| Will | 10:50-11:15 |
 |[9. Plotting with ggplot2](./day_3/D3.2_plotting_with_ggplot2.md){ .md-button .md-button--primary} | ggplot2 for data visualization | Noor | 11:15-12:00 |
 
@@ -244,7 +244,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
 Questions?
 
-If you get stuck due to an error while running code in the lesson, [email us](hbctraining@hsph.harvard.edu)
+If you get stuck due to an error while running code in the lesson, [email us](mailto:hbctraining@hsph.harvard.edu)
 
 <div class="grid cards" markdown>
 
@@ -330,7 +330,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 
 | **Lesson**                                        | **Overview** | **Instructor** | **Time** |
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
-|[10. Review self-learning](#before-the-next-class #3){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:35 |
+|[10. Review self-learning](#before-the-next-class-2){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:35 |
 |[11. In-class exercises ](./day_4/D4.1_in_class_exercises.md){ .md-button .md-button--primary } | In class exercises| Will | 10:50-11:15 |
 |[12. Discussion](./#){ .md-button .md-button--primary} | Q&A | Noor | 11:15 - 11:45 |
 |[13. Wrap Up](./day_4/D4.2_R_workshop_wrapup_all.pdf){ .md-button .md-button--primary} | Wrap up and checking out| Noor | 11:45 - 12:00 |
@@ -350,10 +350,10 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
 <div class="grid cards" markdown>
 
 ??? info "Answer Keys"
-    - [Answer Keys Day 1](./day_4_exercise_n_answer_keys/day1_hw_answer-key.md)
-    - [Answer Keys Day 2](./day_4_exercise_n_answer_keys/day2_hw_answer-key.md)
-    - [Answer Keys Day 3](./day_4_exercise_n_answer_keys/day3_hw_answer-key.md)
-    - [Answer Keys Final exercise](./day_4_exercise_n_answer_keys/day4_intro_to_R_key.md)
+    - [Answer Keys Day 1](./day_4_exercise_n_answer_keys/Day1_Homework_Answer-Key.md)
+    - [Answer Keys Day 2](./day_4_exercise_n_answer_keys/Day2_Homework_Answer-Key.md)
+    - [Answer Keys Day 3](./day_4_exercise_n_answer_keys/Day3_Homework_Answer-Key.md)
+    - [Answer Keys Final exercise](./day_4_exercise_n_answer_keys/Day4_Intro_to_R_Answer-Key.md)
 
 </div>
 
@@ -370,7 +370,7 @@ If you get stuck due to an error while running code in the lesson, [email us](hb
     - [Functional analysis](https://hbctraining.github.io/Training-modules/DGE-functional-analysis/)
     - [More ggplot2](https://hbctraining.github.io/publication_perfect/)
     - [ggplot2 cookbook](http://www.cookbook-r.com/Graphs/)
-    - [Running R and Rstudio on O2](https://harvardmed.atlassian.net/wiki/spaces/O2/pages/1623425967/RStudio+on+O2)
+    - [Running R and Rstudio on O2](https://harvardmed.atlassian.net/wiki/spaces/O2/pages/1594262976/Intro+to+R+Bioconductor)
 
 - __Resources__
     - [Online learning resources](https://hbctraining.github.io/bioinformatics_online/lists/online_trainings.html)

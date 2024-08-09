@@ -132,7 +132,7 @@ plugins:
       verbose: true
       media_type: print
       enabled_if_env: ENABLE_PDF_EXPORT
-      ENABLE_PDF_EXPORT: 1
+
 
 extra_css:
   - stylesheets/extra.css
