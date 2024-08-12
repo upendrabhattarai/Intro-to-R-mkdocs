@@ -25,7 +25,7 @@ html {
 }
 .md-typeset h1 {
     color: var(--md-default-fg-color);
-    font-size: 2rem;
+    font-size: 26px;
     font-family: "Degular", sans-serif;
     line-height: 1.5rem;
     font-weight: 600;
@@ -34,7 +34,7 @@ html {
     margin-top: 0rem;
 }
 .md-typeset h2 {
-    font-size: 1rem;
+    font-size: 24px;
     font-family: "Degular", sans-serif;
     line-height: 1rem;
     font-weight: 500;
@@ -43,7 +43,7 @@ html {
     margin-bottom: 0rem;
 }
 .md-typeset h3 {
-    font-size: 1.2rem;
+    font-size: 22px;
     font-family: "Degular", sans-serif;
     line-height: 1.5rem;
     font-weight: 400;
@@ -52,18 +52,18 @@ html {
 @media (min-width: 768px) {
     .md-typeset h1 {
         font-family: "Degular", sans-serif;
-        font-size: 3.2rem;
+        font-size: 48px;
         line-height: 4rem;
     }
     .md-typeset h2 {
         font-family: "Degular", sans-serif;
-        font-size: 2rem;
-        line-height: 2.5rem;
+        font-size: 30px;
+        line-height: 1.5rem;
     }
     .md-typeset h3 {
         font-family: "Degular", sans-serif;
-        font-size: 1.5rem;
-        line-height: 2rem;
+        font-size: 22px;
+        line-height: 1.5rem;
     }
 }
 

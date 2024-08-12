@@ -406,14 +406,18 @@
 </div>
 <h3 id="package-installation-from-cran">Package installation from CRAN<a class="headerlink" href="#package-installation-from-cran" title="Permanent link">&para;</a></h3>
 <p>CRAN is a repository where the latest downloads of R (and legacy versions) are found in addition to source code for thousands of different user contributed R packages.</p>
-<p><a class="glightbox" href="../../img/cran_packages.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/cran_packages.png" width="900" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/cran_packages.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/cran_packages.png" width="900" /></a>
+</center></p>
 <p>Packages for R can be installed from the <a href="http://cran.r-project.org/">CRAN</a> package repository using the <code>install.packages</code> function. This function will download the source code from on the CRAN mirrors and install the package (and any dependencies) locally on your computer. </p>
 <p>An example is given below for the <code>ggplot2</code> package that will be required for some plots we will create later on. Run this code to install <code>ggplot2</code>.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;ggplot2&quot;</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="package-installation-from-bioconductor">Package installation from Bioconductor<a class="headerlink" href="#package-installation-from-bioconductor" title="Permanent link">&para;</a></h3>
 <p>Alternatively, packages can also be installed from <a href="https://www.bioconductor.org/">Bioconductor</a>, another repository of packages which provides tools for the analysis and comprehension of high-throughput <strong>genomic data</strong>. These packages includes (but is not limited to) tools for performing statistical analysis, annotation packages, and accessing public datasets.</p>
-<p><a class="glightbox" href="../../img/bioconductor_logo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/bioconductor_logo.png" width="400" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/bioconductor_logo.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/bioconductor_logo.png" width="400" /></a>
+</center></p>
 <p>There are many packages that are available in CRAN and Bioconductor, but there are also packages that are specific to one repository. Generally, you can find out this information with a Google search or by trial and error. </p>
 <p>To install from Bioconductor, you will first need to install BiocManager. <em>This only needs to be done once ever for your R installation.</em> </p>
 <div class="admonition warning">
@@ -450,23 +454,26 @@
 </code></pre></div>
 <p>In this case there are several other packages that were also loaded along with <code>ggplot2</code>.</p>
 <p>We only need to install a package once on our computer. However, to use the package, we need to load the library every time we start a new R/RStudio environment. You can think of this as <strong>installing a bulb</strong> versus <strong>turning on the light</strong>. </p>
-<p><a class="glightbox" href="../../img/install_vs_library.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/install_vs_library.jpeg" width="800" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/install_vs_library.jpeg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/install_vs_library.jpeg" width="800" /></a>
+</center></p>
 <p><em>Analogy and image credit to <a href="https://twitter.com/visnut/status/1248087845589274624">Dianne Cook</a> of <a href="https://www.monash.edu/">Monash University</a>.</em> </p>
 <h3 id="finding-functions-specific-to-a-package">Finding functions specific to a package<a class="headerlink" href="#finding-functions-specific-to-a-package" title="Permanent link">&para;</a></h3>
 <p>This is your first time using <code>ggplot2</code>, how do you know where to start and what functions are available to you? One way to do this, is by using the <code>Package</code> tab in RStudio. If you click on the tab, you will see listed all packages that you have installed. For those <em>libraries that you have loaded</em>, you will see a blue checkmark in the box next to it. Scroll down to <code>ggplot2</code> in your list:</p>
-<p><a class="glightbox" href="../../img/ggplot_help.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggplot_help.png" width="400" /></a>  </p>
+<p><center>
+<a class="glightbox" href="../../img/ggplot_help.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggplot_help.png" width="500" /></a><br />
+</center></p>
 <p>If your library is successfully loaded you will see the box checked, as in the screenshot above. Now, if you click on <code>ggplot2</code> RStudio will open up the help pages and you can scroll through.</p>
 <p>An alternative is to find the help manual online, which can be less technical and sometimes easier to follow. For example, <a href="https://ggplot2.tidyverse.org/reference/index.html">this website</a> is much more comprehensive for ggplot2 and is the result of a Google search. Many of the Bioconductor packages also have very helpful vignettes that include comprehensive tutorials with mock data that you can work with.</p>
 <p>If you can't find what you are looking for, you can use the <a href="https://www.rdocumentation.org/">rdocumention.org</a> website that search through the help files across all packages available.</p>
 <div class="admonition question">
 <p class="admonition-title">Exercise</p>
 <p>The <code>ggplot2</code> package is part of the <a href="https://www.tidyverse.org/packages/"><code>tidyverse</code> suite of integrated packages</a> which was designed to work together to make common data science operations more user-friendly. <strong>We will be using the <code>tidyverse</code> suite in later lessons, and so let's install it</strong>. </p>
-<div class="admonition tip">
+<div class="admonition note">
 <p class="admonition-title">NOTE:</p>
 <p>This suite of packages is only available in CRAN._ </p>
 </div>
 </div>
-<hr />
 <hr />
 <div class="admonition quote">
 <p class="admonition-title">Attribution notice</p>
@@ -475,7 +482,10 @@
 <p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
 </li>
 <li>
-<p><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/).All">http://datacarpentry.org/).All</a> Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></p>
+<p><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>).</em></p>
+</li>
+<li>
+<p><em>All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></p>
 </li>
 </ul>
 </div>
@@ -499,7 +509,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-08-05
+    2024-08-09
   </span>
 
     

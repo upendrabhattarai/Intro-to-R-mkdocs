@@ -20,7 +20,7 @@
     
     
       
-        <title>Data subsetting with base R: vectors and factors - Intro-to-R-mkdocs</title>
+        <title>Reading in and inspecting data - Intro-to-R-mkdocs</title>
       
     
     
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Data subsetting with base R: vectors and factors
+              Reading in and inspecting data
             
           </span>
         </div>
@@ -391,7 +391,7 @@
   
 
 
-  <h1>Data subsetting with base R: vectors and factors</h1>
+  <h1>Reading in and inspecting data</h1>
 
 <h2 id="learning-objectives">Learning Objectives<a class="headerlink" href="#learning-objectives" title="Permanent link">&para;</a></h2>
 <ul>
@@ -506,7 +506,7 @@
 <h3 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h3>
 <p>When working with large datasets, you will very likely be working with "metadata" file which contains the information about each sample in your dataset.</p>
 <p><center>
-<a class="glightbox" href="../../img/metadata_view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="metadata" src="../../img/metadata_view.png" width="400" /></a> </p>
+<a class="glightbox" href="../../img/17.metadata_view.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="metadata" src="../../img/17.metadata_view.png" width="500" /></a> </p>
 <p></center>
 The metadata is very important information and we encourage you to think about creating a document with as much metadata you can record before you bring the data into R. <a href="https://datamanagement.hms.harvard.edu/metadata-overview">Here is some additional reading on metadata</a> from the <a href="https://datamanagement.hms.harvard.edu/">HMS Data Management Working Group</a>.</p>
 <h3 id="the-readcsv-function">The <code>read.csv()</code> function<a class="headerlink" href="#the-readcsv-function" title="Permanent link">&para;</a></h3>
@@ -515,7 +515,7 @@ The metadata is very important information and we encourage you to think about c
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="o">?</span><span class="n">read.csv</span>
 </code></pre></div>
 <center>
-<a class="glightbox" href="../../img/read.table-help.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="readtable" src="../../img/read.table-help.png" width="450" /></a> </p>
+<a class="glightbox" href="../../img/read.table-help.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="readtable" src="../../img/read.table-help.png" width="550" /></a> </p>
 <p></center></p>
 <p>The first thing you will notice is that you've pulled up the documentation for <code>read.table()</code>, this is because that is the parent function and all the other functions are in the same family. </p>
 <p>The next item on the documentation page is the function <strong>Description</strong>, which specifies that the output of this set of functions is going to be a <strong>data frame</strong> - "<em>Reads a file in table format and <strong>creates a data frame from it</strong>, with cases corresponding to lines and variables to fields in the file.</em>"</p>
@@ -562,11 +562,17 @@ The metadata is very important information and we encourage you to think about c
 <p>RStudio supports the automatic completion of code using the <kbd>Tab</kbd> key. This is especially helpful for when reading in files to ensure the correct file path. The tab completion feature also provides a shortcut to listing objects, and inline help for functions. <strong>Tab completion is your friend!</strong> We encourage you to use it whenever possible.</p>
 </div>
 <p>Go to your Global environment and click on the name of the data frame you just created. </p>
-<p><a class="glightbox" href="../../img/metadata_env.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/metadata_env.png" width="300" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/metadata_env.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/metadata_env.png" width="500" /></a>
+</center></p>
 <p>When you do this the metadata table will pop up on the top left hand corner of RStudio, right next to the R script.</p>
-<p><a class="glightbox" href="../../img/metadata_display.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/metadata_display.png" width="300" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/metadata_display.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/metadata_display.png" width="500" /></a>
+</center></p>
 <p>You should see a subtle coloring (blue-gray) of the first row and first column, the rest of the table will have a white background. This is because your first row and first columns have different properties than the rest of the table, they are the names of the rows and columns respectively. </p>
-<p><a class="glightbox" href="../../img/metadata_display_row_cols.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/metadata_display_row_cols.png" width="300" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/metadata_display_row_cols.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/metadata_display_row_cols.png" width="500" /></a>
+</center></p>
 <p>Earlier we noted that the file we just read in had column names (first row of values) and how <code>read.csv()</code> deals with "headers". In addition to column headers, <code>read.csv()</code> also assumes that the first column contains the row names. Not all functions in the <code>read.table()</code> family of functions will do this and depending on which one you use, you may have to specify an additional argument to properly assign the row names and column names.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -654,10 +660,16 @@ sample12       KO    typeB      3
 <hr />
 <div class="admonition quote">
 <p class="admonition-title">Attribution notice</p>
-<p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
 <ul>
-<li><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>). 
-    All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></li>
+<li>
+<p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
+</li>
+<li>
+<p><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>).</em></p>
+</li>
+<li>
+<p><em>All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></p>
+</li>
 </ul>
 </div>
 
@@ -680,7 +692,7 @@ sample12       KO    typeB      3
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-08-05
+    2024-08-09
   </span>
 
     

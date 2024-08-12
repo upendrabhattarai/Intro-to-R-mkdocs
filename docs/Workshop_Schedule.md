@@ -14,9 +14,9 @@
 
 | **Lesson**                                        | **Overview** | **Instructor** | **Time** |
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
-|[1. Workshop Introduction](./day_1/D1.1_intro_to_R_workshop_all.pdf){ .md-button .md-button--primary} | Welcome and housekeeping | Will | 10:00-10:30 |
-|[2. Intro to R and RStudio](./day_1/D1.2_introR-R-and-RStudio.md){ .md-button .md-button--primary} | Introduction to R and RStudio| Noor | 10:30-11:45 |
-|[3. Self learning materials](#){ .md-button .md-button--primary} |Overview of self-learning materials | Will | 11:45-12:00 |
+|[Workshop Introduction](./day_1/D1.1_intro_to_R_workshop_all.pdf){ .md-button .md-button--primary} | Welcome and housekeeping | Will | 10:00-10:30 |
+|[Intro to R and RStudio](./day_1/D1.2_introR-R-and-RStudio.md){ .md-button .md-button--primary} | Introduction to R and RStudio| Noor | 10:30-11:45 |
+|[Self learning materials](#){ .md-button .md-button--primary} |Overview of self-learning materials | Will | 11:45-12:00 |
 
 </div>
 
@@ -94,9 +94,9 @@ If you get stuck due to an error while running code in the lesson, [email us](ma
 
 | **Lesson**                                        | **Overview** | **Instructor** | **Time** |
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
-|[4. Review self-learning](#before-the-next-class){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:50 |
-|[5. In-class exercises ](./day_2/D2.1_in_class_exercises.md){ .md-button .md-button--primary } | Use and customize function and arguments| Noor | 10:50-11:15 |
-|[6. Data Wrangling](./day_2/D2.2_data_wrangling.md){ .md-button .md-button--primary} |Subsetting Vectors and Factors | Will | 11:15-12:00 |
+|[Review self-learning](#before-the-next-class){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:50 |
+|[In-class exercises ](./day_2/D2.1_in_class_exercises.md){ .md-button .md-button--primary } | Use and customize function and arguments| Noor | 10:50-11:15 |
+|[Data Wrangling](./day_2/D2.2_data_wrangling.md){ .md-button .md-button--primary} |Subsetting Vectors and Factors | Will | 11:15-12:00 |
 
 </div>
 
@@ -225,9 +225,9 @@ If you get stuck due to an error while running code in the lesson, [email us](ma
 
 | **Lesson**                                        | **Overview** | **Instructor** | **Time** |
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
-|[7. Review self-learning](#before-the-next-class-1){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:35 |
-|[8. In-class exercises ](./day_3/D3.1_in_class_exercises.md){ .md-button .md-button--primary } | Customizing functions and arguments| Will | 10:50-11:15 |
-|[9. Plotting with ggplot2](./day_3/D3.2_plotting_with_ggplot2.md){ .md-button .md-button--primary} | ggplot2 for data visualization | Noor | 11:15-12:00 |
+|[Review self-learning](#before-the-next-class-1){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:35 |
+|[In-class exercises ](./day_3/D3.1_in_class_exercises.md){ .md-button .md-button--primary } | Customizing functions and arguments| Will | 10:50-11:15 |
+|[Plotting with ggplot2](./day_3/D3.2_plotting_with_ggplot2.md){ .md-button .md-button--primary} | ggplot2 for data visualization | Noor | 11:15-12:00 |
 
 </div>
 
@@ -330,10 +330,10 @@ If you get stuck due to an error while running code in the lesson, [email us](ma
 
 | **Lesson**                                        | **Overview** | **Instructor** | **Time** |
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
-|[10. Review self-learning](#before-the-next-class-2){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:35 |
-|[11. In-class exercises ](./day_4/D4.1_in_class_exercises.md){ .md-button .md-button--primary } | In class exercises| Will | 10:50-11:15 |
-|[12. Discussion](./#){ .md-button .md-button--primary} | Q&A | Noor | 11:15 - 11:45 |
-|[13. Wrap Up](./day_4/D4.2_R_workshop_wrapup_all.pdf){ .md-button .md-button--primary} | Wrap up and checking out| Noor | 11:45 - 12:00 |
+|[Review self-learning](#before-the-next-class-2){ .md-button .md-button--primary } | Questions about self-learning| All | 10:00-10:35 |
+|[In-class exercises ](./day_4/D4.1_in_class_exercises.md){ .md-button .md-button--primary } | In class exercises| Will | 10:50-11:15 |
+|[Discussion](./#){ .md-button .md-button--primary} | Q&A | Noor | 11:15 - 11:45 |
+|[Wrap Up](./day_4/D4.2_R_workshop_wrapup_all.pdf){ .md-button .md-button--primary} | Wrap up and checking out| Noor | 11:45 - 12:00 |
 
 </div>
 

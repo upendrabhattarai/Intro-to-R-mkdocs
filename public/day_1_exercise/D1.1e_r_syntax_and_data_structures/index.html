@@ -436,21 +436,27 @@
 <p>We know that variables are like buckets, and so far we have seen that bucket filled with a single value. Even when <code>number</code> was created, the result of the mathematical operation was a single value. <strong>Variables can store more than just a single value, they can store a multitude of different data structures.</strong> These include, but are not limited to, vectors (<code>c</code>), factors (<code>factor</code>), matrices (<code>matrix</code>), data frames (<code>data.frame</code>) and lists (<code>list</code>).</p>
 <h3 id="vectors">Vectors<a class="headerlink" href="#vectors" title="Permanent link">&para;</a></h3>
 <p>A vector is the most common and basic data structure in R, and is pretty much the workhorse of R. It's basically just a collection of values, mainly either numbers,</p>
-<p><a class="glightbox" href="../../img/vector2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="numeric vector" src="../../img/vector2.png" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/vector2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="numeric vector" src="../../img/vector2.png" /></a></p>
 <p>or characters,</p>
 <p><a class="glightbox" href="../../img/vector1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="character vector" src="../../img/vector1.png" /></a></p>
 <p>or logical values,</p>
 <p><a class="glightbox" href="../../img/vector5-logical.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="logical vector" src="../../img/vector5-logical.png" /></a></p>
+<p></center></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p><strong>All values in a vector must be of the same data type.</strong> </p>
 <p>If you try to create a vector with more than a single data type, R will try to coerce it into a single data type. </p>
 </div>
 <p>For example, if you were to try to create the following vector:</p>
-<p><a class="glightbox" href="../../img/vector3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mixed vector" src="../../img/vector3.png" /></a></p>
-<p>R will coerce it into:</p>
-<p><a class="glightbox" href="../../img/vector4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vector4" src="../../img/vector4.png" width="400" /></a></p>
-<p>The analogy for a vector is that your bucket now has different compartments; these compartments in a vector are called <em>elements</em>. </p>
+<p><center>
+<a class="glightbox" href="../../img/vector3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="mixed vector" src="../../img/vector3.png" /></a></p>
+<p></center>
+R will coerce it into:</p>
+<p><center>
+<a class="glightbox" href="../../img/vector4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="vector4" src="../../img/vector4.png" width="400" /></a>
+</center>
+The analogy for a vector is that your bucket now has different compartments; these compartments in a vector are called <em>elements</em>. </p>
 <p>Each <strong>element</strong> contains a single value, and there is no limit to how many elements you can have. A vector is assigned to a single variable, because regardless of how many elements it contains, in the end it is still a single entity (bucket). </p>
 <p>Let's create a vector of genome lengths and assign it to a variable called <code>glengths</code>. </p>
 <p>Each element of this vector contains a single numeric value, and three values will be combined together into a vector using <code>c()</code> (the combine function). All of the values are put within the parentheses and separated with a comma.</p>
@@ -485,7 +491,9 @@ Note that RStudio is quite helpful in color-coding the various data types. We ca
 <h3 id="factors">Factors<a class="headerlink" href="#factors" title="Permanent link">&para;</a></h3>
 <p>A <strong>factor</strong> is a special type of vector that is used to <strong>store categorical data</strong>. Each unique category is referred to as a <strong>factor level</strong> (i.e. category = level). Factors are built on top of integer vectors such that each <strong>factor level</strong> is assigned an <strong>integer value</strong>, creating value-label pairs. </p>
 <p>For instance, if we have four animals and the first animal is female, the second and third are male, and the fourth is female, we could create a factor that appears like a vector, but has integer values stored under-the-hood. The integer value assigned is a one for females and a two for males. The numbers are assigned in alphabetical order, so because the f- in females comes before the m- in males in the alphabet, females get assigned a one and males a two. In later lessons we will show you how you could change these assignments.</p>
-<p><a class="glightbox" href="../../img/factors_sm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="factors" src="../../img/factors_sm.png" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/factors_sm.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="factors" src="../../img/factors_sm.png" /></a>
+</center></p>
 <p>Let's create a factor vector and explore a bit more.  We'll start by creating a character vector describing three different levels of expression. Perhaps the first value represents expression in mouse1, the second value represents expression in mouse2, and so on and so forth:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="c1"># Create a character vector and store the vector as a variable called &#39;expression&#39;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="n">expression</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;low&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;high&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;medium&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;high&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;low&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;medium&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;high&quot;</span><span class="p">)</span>
@@ -495,9 +503,13 @@ Note that RStudio is quite helpful in color-coding the various data types. We ca
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="n">expression</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">factor</span><span class="p">(</span><span class="n">expression</span><span class="p">)</span>
 </code></pre></div>
 <p>So, what exactly happened when we applied the <code>factor()</code> function? </p>
-<p><a class="glightbox" href="../../img/factors_new.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="factor_new" src="../../img/factors_new.png" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/factors_new.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="factor_new" src="../../img/factors_new.png" /></a>
+</center></p>
 <p>The expression vector is categorical, in that all the values in the vector belong to a set of categories; in this case, the categories are <code>low</code>, <code>medium</code>, and <code>high</code>. By turning the expression vector into a factor, the <strong>categories are assigned integers alphabetically</strong>, with high=1, low=2, medium=3. This in effect assigns the different factor levels. You can view the newly created factor variable and the levels in the <strong>Environment</strong> window.</p>
-<p><a class="glightbox" href="../../img/factors.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Factor variables in environment" src="../../img/factors.png" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/factors.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Factor variables in environment" src="../../img/factors.png" /></a>
+</center></p>
 <p>So now that we have an idea of what factors are, when would you ever want to use them?</p>
 <p>Factors are extremely valuable for many operations often performed in R. For instance, factors can give order to values with no intrinsic order. In the previous 'expression' vector, if I wanted the low category to be less than the medium category, then we could do this using factors. Also, factors are necessary for many statistical methods. For example, descriptive statistics can be obtained for character vectors if you have the categorical information stored as a factor. Also, if you want to denote which category is your base level for a statistical comparison, then you would need to have your category variable stored as a factor with the base level assigned to 1. Anytime that it is helpful to have the categories thought of as groups in an analysis, the factor function makes this possible. For instance, if you want to color your plots by treatment type, then you would need the treatment variable to be a factor.</p>
 <div class="admonition question">
@@ -514,11 +526,15 @@ Note that RStudio is quite helpful in color-coding the various data types. We ca
 </div>
 <h3 id="matrix">Matrix<a class="headerlink" href="#matrix" title="Permanent link">&para;</a></h3>
 <p>A <code>matrix</code> in R is a collection of vectors of <strong>same length and identical datatype</strong>. Vectors can be combined as columns in the matrix or by row, to create a 2-dimensional structure.</p>
-<p><a class="glightbox" href="../../img/matrix.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="matrix" src="../../img/matrix.png" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/matrix.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="matrix" src="../../img/matrix.png" /></a>
+</center></p>
 <p>Matrices are used commonly as part of the mathematical machinery of statistics. They are usually of numeric datatype and used in computational algorithms to serve as a checkpoint. For example, if input data is not of identical data type (numeric, character, etc.), the <code>matrix()</code> function will throw an error and stop any downstream code execution.</p>
 <h3 id="data-frame">Data Frame<a class="headerlink" href="#data-frame" title="Permanent link">&para;</a></h3>
 <p>A <code>data.frame</code> is the <em>de facto</em> data structure for most tabular data and what we use for statistics and plotting. A <code>data.frame</code> is similar to a matrix in that it's a collection of vectors of the <strong>same length</strong> and each vector represents a column. However, in a dataframe <strong>each vector can be of a different data type</strong> (e.g., characters, integers, factors). In the data frame pictured below, the first column is character, the second column is numeric, the third is character, and the fourth is logical.</p>
-<p><a class="glightbox" href="../../img/dataframe.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dataframe" src="../../img/dataframe.png" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/dataframe.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="dataframe" src="../../img/dataframe.png" /></a>
+</center></p>
 <p>A data frame is the most common way of storing data in R, and if used systematically makes data analysis easier. </p>
 <p>We can create a dataframe by bringing <strong>vectors</strong> together to <strong>form the columns</strong>. We do this using the <code>data.frame()</code> function, and giving the function the different vectors we would like to bind together. <em>This function will only work for vectors of the same length.</em></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="c1"># Create a data frame and store it as a variable called &#39;df&#39;</span>
@@ -538,7 +554,9 @@ Note that RStudio is quite helpful in color-coding the various data types. We ca
 </div>
 <h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
 <p>Lists are a data structure in R that can be perhaps a bit daunting at first, but soon become amazingly useful. A list is a data structure that can hold any number of any types of other data structures.</p>
-<p><a class="glightbox" href="../../img/list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="list" src="../../img/list.png" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/list.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="list" src="../../img/list.png" /></a>
+</center></p>
 <p>If you have variables of different data structures you wish to combine, you can put all of those into one list object by using the <code>list()</code> function and placing all the items you wish to combine within parentheses:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="n">list1</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">list</span><span class="p">(</span><span class="n">species</span><span class="p">,</span><span class="w"> </span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">number</span><span class="p">)</span>
 </code></pre></div>
@@ -570,9 +588,17 @@ Note that RStudio is quite helpful in color-coding the various data types. We ca
 <hr />
 <div class="admonition quote">
 <p class="admonition-title">Attribution notice</p>
-<p>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.*</p>
-<p>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>). </p>
-<p>All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).*</p>
+<ul>
+<li>
+<p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
+</li>
+<li>
+<p><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>).</em></p>
+</li>
+<li>
+<p><em>All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></p>
+</li>
+</ul>
 </div>
 
 
@@ -594,7 +620,7 @@ Note that RStudio is quite helpful in color-coding the various data types. We ca
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-08-05
+    2024-08-09
   </span>
 
     

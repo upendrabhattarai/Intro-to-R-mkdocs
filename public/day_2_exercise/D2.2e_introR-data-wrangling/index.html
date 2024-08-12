@@ -348,15 +348,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#an-r-package-for-data-wrangling" class="md-nav__link">
-    <span class="md-ellipsis">
-      An R package for data wrangling
-    </span>
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -388,7 +379,9 @@
 </ul>
 <h3 id="dataframes">Dataframes<a class="headerlink" href="#dataframes" title="Permanent link">&para;</a></h3>
 <p>Dataframes (and matrices) have 2 dimensions (rows and columns), so if we want to select some specific data from it we need to specify the "coordinates" we want from it. We use the same square bracket notation but rather than providing a single index, there are <em>two indices required</em>. Within the square bracket, <strong>row numbers come first followed by column numbers (and the two are separated by a comma)</strong>. Let's explore the <code>metadata</code> dataframe, shown below are the first six samples:</p>
-<p><a class="glightbox" href="../../img/metadata.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="metadata" src="../../img/metadata.png" /></a></p>
+<p><center>
+<a class="glightbox" href="../../img/metadata.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="metadata" src="../../img/metadata.png" /></a>
+</center></p>
 <p>Let's say we wanted to extract the wild type (<code>Wt</code>) value that is present in the first row and the first column. To extract it, just like with vectors, we give the name of the data frame that we want to extract from, followed by the square brackets. Now inside the square brackets we give the coordinates or indices for the rows in which the value(s) are present, followed by a comma, then the coordinates or indices for the columns in which the value(s) are present. We know the wild type value is in the first row if we count from the top, so we put a one, then a comma. The wild type value is also in the first column, counting from left to right, so we put a one in the columns space too. </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Extract value &#39;Wt&#39;</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">metadata</span><span class="p">[</span><span class="m">1</span><span class="p">,</span><span class="w"> </span><span class="m">1</span><span class="p">]</span>
@@ -441,14 +434,14 @@ or 2? oh, right... they are in column 1). In some cases, the column/row number f
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="n">metadata</span><span class="o">$</span><span class="n">genotype</span><span class="p">[</span><span class="m">1</span><span class="o">:</span><span class="m">5</span><span class="p">]</span>
 </code></pre></div>
 <p>Unfortunately, there is no equivalent <code>$</code> syntax to select a row by name. </p>
-<hr />
-<p><strong>Exercises</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Exercise</p>
 <ol>
 <li>Return a data frame with only the <code>genotype</code> and <code>replicate</code> column values for <code>sample2</code> and <code>sample8</code>.</li>
 <li>Return the fourth and ninth values of the <code>replicate</code> column.</li>
 <li>Extract the <code>replicate</code> column as a data frame.</li>
 </ol>
-<hr />
+</div>
 <h4 id="selecting-using-indices-with-logical-operators">Selecting using indices with logical operators<a class="headerlink" href="#selecting-using-indices-with-logical-operators" title="Permanent link">&para;</a></h4>
 <p>With data frames, similar to vectors, we can use logical expressions to extract the rows or columns in the data frame with specific values. First, we need to determine the indices in a rows or columns where a logical expression is <code>TRUE</code>, then we can extract those rows or columns from the data frame. </p>
 <p>For example, if we want to return only those rows of the data frame with the <code>celltype</code> column having a value of <code>typeA</code>, we would perform two steps:</p>
@@ -490,13 +483,14 @@ or 2? oh, right... they are in column 1). In some cases, the column/row number f
 <p>So far we haven't stored as variables any of the extractions/subsettings that we have performed. Let's save this output to a variable called <code>sub_meta</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="n">sub_meta</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">metadata</span><span class="p">[</span><span class="nf">which</span><span class="p">(</span><span class="n">metadata</span><span class="o">$</span><span class="n">replicate</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">1</span><span class="p">),</span><span class="w"> </span><span class="p">]</span>
 </code></pre></div>
-<hr />
-<p><strong>Exercise</strong>  </p>
+<div class="admonition question">
+<p class="admonition-title">Exercises</p>
 <p>Subset the <code>metadata</code> dataframe to return only the rows of data with a genotype of <code>KO</code>.</p>
-<hr />
-<blockquote>
-<p><strong>NOTE:</strong> There are easier methods for subsetting <strong>dataframes</strong> using logical expressions, including the <code>filter()</code> and the <code>subset()</code> functions. These functions will return the rows of the dataframe for which the logical expression is TRUE, allowing us to subset the data in a single step. We will explore the <code>filter()</code> function in more detail in a later lesson.</p>
-</blockquote>
+<div class="admonition note">
+<p class="admonition-title">NOTE</p>
+<p>There are easier methods for subsetting <strong>dataframes</strong> using logical expressions, including the <code>filter()</code> and the <code>subset()</code> functions. These functions will return the rows of the dataframe for which the logical expression is TRUE, allowing us to subset the data in a single step. We will explore the <code>filter()</code> function in more detail in a later lesson.</p>
+</div>
+</div>
 <h3 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h3>
 <p>Selecting components from a list requires a slightly different notation, even though in theory a list is a vector (that contains multiple data structures). To select a specific component of a list, you need to use double bracket notation <code>[[]]</code>. Let's use the <code>list1</code> that we created previously, and index the second component:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">list1</span><span class="p">[[</span><span class="m">2</span><span class="p">]]</span>
@@ -516,20 +510,17 @@ or 2? oh, right... they are in column 1). In some cases, the column/row number f
 <a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="p">[</span><span class="m">1</span><span class="p">]</span><span class="w"> </span><span class="s">&quot;ecoli&quot;</span>
 </code></pre></div>
 <p>You can also do the same for dataframes and matrices, although with larger datasets it is not advisable. Instead, it is better to save the contents of a list component to a variable (as we did above) and further manipulate it. Also, it is important to note that when selecting components we can only <strong>access one at a time</strong>. To access multiple components of a list, see the note below. </p>
-<blockquote>
-<p><strong>NOTE:</strong> Using the single bracket notation also works wth lists. The difference is the class of the information that is retrieved. Using single bracket notation i.e. <code>list1[1]</code> will return the contents in a list form and <em>not the original data structure</em>. The benefit of this notation is that it allows indexing by vectors so you can access multiple components of the list at once.</p>
-</blockquote>
-<hr />
-<p><strong>Exercises</strong>  </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using the single bracket notation also works wth lists. The difference is the class of the information that is retrieved. Using single bracket notation i.e. <code>list1[1]</code> will return the contents in a list form and <em>not the original data structure</em>. The benefit of this notation is that it allows indexing by vectors so you can access multiple components of the list at once.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Exercise</p>
 <ol>
-<li>
-<p>Create a list named <code>random</code> with the following components: <code>metadata</code>, <code>age</code>, <code>list1</code>, <code>samplegroup</code>, and <code>number</code>.</p>
-</li>
-<li>
-<p>Extract the <code>samplegroup</code> component.</p>
-</li>
+<li>Create a list named <code>random</code> with the following components: <code>metadata</code>, <code>age</code>, <code>list1</code>, <code>samplegroup</code>, and <code>number</code>.</li>
+<li>Extract the <code>samplegroup</code> component.</li>
 </ol>
-<hr />
+</div>
 <p>Assigning names to the components in a list can help identify what each list component contains, as well as, facilitating the extraction of values from list components. </p>
 <p>Adding names to components of a list uses the <code>names()</code> function. Let's check and see if the <code>list1</code> has names for the components:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nf">names</span><span class="p">(</span><span class="n">list1</span><span class="p">)</span><span class="w"> </span>
@@ -545,8 +536,8 @@ or 2? oh, right... they are in column 1). In some cases, the column/row number f
 <div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="c1"># Extract &#39;df&#39; component</span>
 <a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="n">list1</span><span class="o">$</span><span class="n">df</span>
 </code></pre></div>
-<hr />
-<p><strong>Exercise</strong></p>
+<div class="admonition question">
+<p class="admonition-title">Exercise</p>
 <p>Let's practice combining ways to extract data from the data structures we have covered so far:</p>
 <ol>
 <li>
@@ -556,17 +547,26 @@ or 2? oh, right... they are in column 1). In some cases, the column/row number f
 <p>Extract the <code>age</code> component using the <code>$</code> notation</p>
 </li>
 </ol>
-<hr />
-<blockquote>
-<h3 id="an-r-package-for-data-wrangling">An R package for data wrangling<a class="headerlink" href="#an-r-package-for-data-wrangling" title="Permanent link">&para;</a></h3>
+</div>
+<div class="admonition note">
+<p class="admonition-title">An R package for data wrangling</p>
 <p>The methods presented above are using base R functions for data wrangling. Later we will explore the <strong>Tidyverse suite of packages</strong>, specifically designed to make data wrangling easier.</p>
-</blockquote>
+</div>
 <hr />
-<p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
+<div class="admonition quote">
+<p class="admonition-title">Attribution notice</p>
 <ul>
-<li><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>). 
-All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></li>
+<li>
+<p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
+</li>
+<li>
+<p><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>).</em></p>
+</li>
+<li>
+<p><em>All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></p>
+</li>
 </ul>
+</div>
 
 
 
@@ -587,7 +587,7 @@ All Data Carpentry instructional material is made available under the <a href="h
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-08-05
+    2024-08-09
   </span>
 
     

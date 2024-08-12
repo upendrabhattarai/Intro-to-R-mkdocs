@@ -316,8 +316,7 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Calculating average expression">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#the-map-family-of-functions" class="md-nav__link">
@@ -325,11 +324,6 @@
       The map family of functions
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -372,10 +366,9 @@
 </ul>
 <h2 id="setting-up-a-data-frame-for-visualization">Setting up a data frame for visualization<a class="headerlink" href="#setting-up-a-data-frame-for-visualization" title="Permanent link">&para;</a></h2>
 <p>In this lesson we want to make plots to evaluate the average expression in each sample and its relationship with the age of the mouse. So, to this end, we will be adding a couple of additional columns of information to the <code>metadata</code> data frame that we can utilize for plotting. </p>
-<p align="center">
-<a class="glightbox" href="../img/new_metadata.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="../img/new_metadata.png" width="600"></a>
-</p>
-
+<p><center>
+<a class="glightbox" href="../../img/new_metadata.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/new_metadata.png" /></a>
+</center></p>
 <h3 id="calculating-average-expression">Calculating average expression<a class="headerlink" href="#calculating-average-expression" title="Permanent link">&para;</a></h3>
 <p>Let's take a closer look at our counts data. Each column represents a sample in our experiment, and each sample has ~38K values corresponding to the expression of different transcripts. We want to compute <strong>the average value of expression</strong> for each sample eventually. Taking this one step at a time, what would we do if we just wanted the average expression for Sample 1 (across all transcripts)? We can use the R base package provided function called <code>mean()</code>:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">mean</span><span class="p">(</span><span class="n">rpkm_ordered</span><span class="o">$</span><span class="n">sample1</span><span class="p">)</span>
@@ -388,8 +381,7 @@
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="n">samplemeans</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">map_dbl</span><span class="p">(</span><span class="n">rpkm_ordered</span><span class="p">,</span><span class="w"> </span><span class="n">mean</span><span class="p">)</span><span class="w"> </span>
 </code></pre></div>
-<blockquote>
-<h4 id="the-map-family-of-functions">The <code>map</code> family of functions<a class="headerlink" href="#the-map-family-of-functions" title="Permanent link">&para;</a></h4>
+<h3 id="the-map-family-of-functions">The <code>map</code> family of functions<a class="headerlink" href="#the-map-family-of-functions" title="Permanent link">&para;</a></h3>
 <p>The <code>map()</code> family of functions is available from the <strong><code>purrr</code></strong> package, which is part of the tidyverse suite of packages. More detailed information is available in the <a href="http://r4ds.had.co.nz/iteration.html#the-map-functions">R for Data Science</a> book. This family includes several functions, each taking a vector as input and outputting a vector of a specified type. For example, we can use these functions to execute some task/function on every element in a vector, or every column in a dataframe, or every component of a list, and so on. </p>
 <ul>
 <li><code>map()</code> creates a list.</li>
@@ -403,7 +395,6 @@
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">map</span><span class="p">(</span><span class="n">object</span><span class="p">,</span><span class="w"> </span><span class="n">function_to_apply</span><span class="p">)</span>
 </code></pre></div>
 <p>If you would like to practice with the <code>map()</code> family of functions, we have <a href="https://hbctraining.github.io/Intro-to-R/lessons/map_purrr.html">additional materials</a> available.</p>
-</blockquote>
 <h3 id="creating-a-new-metadata-object-with-additional-information">Creating a new metadata object with additional information<a class="headerlink" href="#creating-a-new-metadata-object-with-additional-information" title="Permanent link">&para;</a></h3>
 <p>Because the input was 12 columns of information the output of <code>map_dbl()</code> is a <em>named</em> vector of length 12. </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="c1"># Named vectors have a name assigned to each element instead of just referring to them as indices ([1], [2] and so on)</span>
@@ -424,17 +415,30 @@
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Take a look at the new_metadata object</span>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nf">View</span><span class="p">(</span><span class="n">new_metadata</span><span class="p">)</span>
 </code></pre></div>
-<blockquote>
-<p>Note that we could have also combined columns using the <code>cbind()</code> function as shown in the code below:
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>that we could have also combined columns using the <code>cbind()</code> function as shown in the code below:
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>## DO NOT RUN
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>new_metadata &lt;- cbind(metadata, samplemeans, age_in_days)
 </code></pre></div>
-The two functions work identically with the exception of assigning row names. For example, if we were combining columns and wanted to add in a vector of row names, we could easily do so in <code>data.frame()</code> with the use of the <code>row.names</code> argument. This argument is not available for the <code>cbind()</code> function.
-</p>
-</blockquote>
+The two functions work identically with the exception of assigning row names. For example, if we were combining columns and wanted to add in a vector of row names, we could easily do so in <code>data.frame()</code> with the use of the <code>row.names</code> argument. This argument is not available for the <code>cbind()</code> function.</p>
+</div>
 <p>We are now ready for plotting and data visualization!</p>
 <hr />
+<div class="admonition quote">
+<p class="admonition-title">Attribution notice</p>
+<ul>
+<li>
 <p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
+</li>
+<li>
+<p><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>).</em></p>
+</li>
+<li>
+<p><em>All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></p>
+</li>
+</ul>
+</div>
 
 
 
@@ -455,7 +459,7 @@ The two functions work identically with the exception of assigning row names. Fo
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-08-05
+    2024-08-09
   </span>
 
     

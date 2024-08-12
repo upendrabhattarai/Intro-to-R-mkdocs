@@ -363,7 +363,7 @@
 <p>When we are working with large sets of numbers it can be useful to display that information graphically to gain more insight. In this lesson we will be plotting with the popular Bioconductor package <a href="http://docs.ggplot2.org/"><code>ggplot2</code></a>.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If you are interested in learning about plotting with base R functions, we have a short <a class="md-button" href="basic_plots_in_r.md">lesson</a>. </p>
+<p>If you are interested in learning about plotting with base R functions, we have a short <a class="md-button" href="../basic_plots_in_r/">lesson</a>. </p>
 </div>
 <p>The <code>ggplot2</code> syntax takes some getting used to, but once you get it, you will find it's extremely powerful and flexible. We will start with drawing a simple x-y scatterplot of <code>samplemeans</code> versus <code>age_in_days</code> from the <code>new_metadata</code> data frame. Please note that <code>ggplot2</code> expects a "data frame" or "tibble" as input.</p>
 <div class="admonition note">
@@ -410,14 +410,14 @@
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">     </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age_in_days</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="w"> </span><span class="n">samplemeans</span><span class="p">))</span>
 </code></pre></div>
 <p><center>
-<a class="glightbox" href="../../img/ggscatter-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggscatter-1.png" width="500" /></a>
+<a class="glightbox" href="../../img/ggscatter-1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggscatter-1.png" width="600" /></a>
 </center></p>
 <p>Now that we have the required aesthetics, let's add some extras like color to the plot. We can <strong><code>color</code> the points on the plot based on the genotype column</strong> within <code>aes()</code>. You will notice that there are a default set of colors that will be used so we do not have to specify. Note that the legend has been conveniently plotted for us.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">new_metadata</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nf">geom_point</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age_in_days</span><span class="p">,</span><span class="w"> </span><span class="n">y</span><span class="o">=</span><span class="w"> </span><span class="n">samplemeans</span><span class="p">,</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">genotype</span><span class="p">))</span><span class="w"> </span>
 </code></pre></div>
 <p><center>
-<a class="glightbox" href="../../img/ggscatter-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggscatter-2.png" width="600" /></a>
+<a class="glightbox" href="../../img/ggscatter-2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggscatter-2.png" width="650" /></a>
 </center></p>
 <p>Let's try to have both <strong>celltype and genotype represented on the plot</strong>. To do this we can assign the <code>shape</code> argument in <code>aes()</code> the celltype column, so that each celltype is plotted with a different shaped data point. </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">new_metadata</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
@@ -425,7 +425,7 @@
 <a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">            </span><span class="n">shape</span><span class="o">=</span><span class="n">celltype</span><span class="p">))</span><span class="w"> </span>
 </code></pre></div>
 <p><center>
-<a class="glightbox" href="../../img/ggscatter-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggscatter-3.png" width="600" /></a>
+<a class="glightbox" href="../../img/ggscatter-3.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggscatter-3.png" width="650" /></a>
 </center></p>
 <p>The data points are quite small. We can adjust the <strong>size of the data points</strong> within the <code>geom_point()</code> layer, but it should <strong>not be within <code>aes()</code></strong> since we are not mapping it to a column in the input data frame, instead we are just specifying a number. </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">ggplot</span><span class="p">(</span><span class="n">new_metadata</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
@@ -433,7 +433,7 @@
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">            </span><span class="n">shape</span><span class="o">=</span><span class="n">celltype</span><span class="p">),</span><span class="w"> </span><span class="n">size</span><span class="o">=</span><span class="m">2.25</span><span class="p">)</span><span class="w"> </span>
 </code></pre></div>
 <p><center>
-<a class="glightbox" href="../../img/ggscatter-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggscatter-4.png" width="600" /></a>
+<a class="glightbox" href="../../img/ggscatter-4.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="img" src="../../img/ggscatter-4.png" width="650" /></a>
 </center></p>
 <p>The labels on the x- and y-axis are also quite small and hard to read. To change their size, we need to add an additional <strong>theme layer</strong>. The ggplot2 <code>theme</code> system handles non-data plot elements such as:</p>
 <ul>
@@ -465,7 +465,7 @@
 <p class="admonition-title">Notes</p>
 <ul>
 <li>You can use the <code>example("geom_point")</code> function here to explore a multitude of different aesthetics and layers that can be added to your plot. As you scroll through the different plots, take note of how the code is modified. You can use this with any of the different geometric object layers available in ggplot2 to learn how you can easily modify your plots! </li>
-<li>RStudio provide this very <a href="../cheatsheets/data-visualization-2.1.pdf">useful cheatsheet</a> for plotting using <code>ggplot2</code>. Different example plots are provided and the associated code (i.e which <code>geom</code> or <code>theme</code> to use in the appropriate situation.) We also encourage you to peruse through this useful <a href="https://ggplot2.tidyverse.org/reference/">online reference</a> for working with ggplot2.</li>
+<li>RStudio provide this very <a href="../../img/data-visualization-2.1.pdf">useful cheatsheet</a> for plotting using <code>ggplot2</code>. Different example plots are provided and the associated code (i.e which <code>geom</code> or <code>theme</code> to use in the appropriate situation.) We also encourage you to peruse through this useful <a href="https://ggplot2.tidyverse.org/reference/">online reference</a> for working with ggplot2.</li>
 </ul>
 </div>
 <div class="admonition question">
@@ -483,7 +483,17 @@
 <hr />
 <div class="admonition quote">
 <p class="admonition-title">Attribution notice</p>
+<ul>
+<li>
 <p><em>This lesson has been developed by members of the teaching team at the <a href="http://bioinformatics.sph.harvard.edu/">Harvard Chan Bioinformatics Core (HBC)</a>. These are open access materials distributed under the terms of the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0), which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.</em></p>
+</li>
+<li>
+<p><em>The materials used in this lesson are adapted from work that is Copyright © Data Carpentry (<a href="http://datacarpentry.org/">http://datacarpentry.org/</a>).</em></p>
+</li>
+<li>
+<p><em>All Data Carpentry instructional material is made available under the <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution license</a> (CC BY 4.0).</em></p>
+</li>
+</ul>
 </div>
 
 
@@ -505,7 +515,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    2024-08-05
+    2024-08-09
   </span>
 
     

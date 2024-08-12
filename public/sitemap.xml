@@ -2,132 +2,137 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/Workshop_Schedule/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_1/D1.2_introR-R-and-RStudio/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_1_exercise/D1.1e_r_syntax_and_data_structures/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_1_exercise/D1.2e_functions_and_arguments/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_1_exercise/D1.3e_reading_in_and_data_inspection/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_2/D2.1_in_class_exercises/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_2/D2.2_data_wrangling/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_2_exercise/D2.1e_packages_and_libraries/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_2_exercise/D2.2e_introR-data-wrangling/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_2_exercise/D2.3e_identifying-matching-elements/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_2_exercise/D2.4e_reordering-to-match-datasets/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_2_exercise/D2.5e_setting_up_to_plot/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_3/D3.1_in_class_exercises/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_3/D3.2_plotting_with_ggplot2/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_3/basic_plots_in_r/</loc>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_3_exercise/D3.1e_Custom_Functions_ggplot2/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_3_exercise/D3.2e_boxplot_exercise/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_3_exercise/D3.3e_exporting_data_and_plots/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_3_exercise/D3.4e_finding_help/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_3_exercise/D3.5e_tidyverse/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4/D4.1_in_class_exercises/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/D4.1e_intro_to_R_hw/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/day1_hw_answer-key/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/Day1_Homework_Answer-Key/</loc>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/day2_hw_answer-key/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/Day2_Homework_Answer-Key/</loc>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/day3_hw_answer-key/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/Day3_Homework_Answer-Key/</loc>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/day4_intro_to_R_key/</loc>
-         <lastmod>2024-08-05</lastmod>
+         <loc>https://github.com/hbctraining/Intro-to-R-mkdocs/day_4_exercise_n_answer_keys/Day4_Intro_to_R_Answer-Key/</loc>
+         <lastmod>2024-08-09</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
