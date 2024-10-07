@@ -14,7 +14,7 @@
 
 | **Lesson**                                        | **Overview** | **Instructor** | **Time** |
 |:---------------------------------------------------|:-------------|:-------------|:-------------|
-|[Workshop Introduction](./day_1/D1.1_intro_to_R_workshop_all.pdf){ .md-button .md-button--primary} | Welcome and housekeeping | Elizabeth | 10:00-10:30 |
+|[Workshop Introduction](./day_1/workshop_intro_slides.pdf){ .md-button .md-button--primary} | Welcome and housekeeping | Elizabeth | 10:00-10:30 |
 |[Intro to R and RStudio](./day_1/D1.2_introR-R-and-RStudio.md){ .md-button .md-button--primary} | Introduction to R and RStudio| Noor | 10:30-11:45 |
 |[Self learning materials](#){ .md-button .md-button--primary} |Overview of self-learning materials | Elizabeth | 11:45-12:00 |
 
